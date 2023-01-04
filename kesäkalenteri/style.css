@@ -1,0 +1,170 @@
+html {
+    font-family: 'Indie Flower'; 
+}
+
+body {
+    background-color: #FBEECF;
+    background-image: url("kuvat/magnus-olin-O4psqFZVOMU-unsplash.jpg");
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    color: black;
+    background-color: #35A7FF;
+   /* background-image: url("kuvat/mona-eendra-vC8wj_Kphak-unsplash.jpg"); */
+    width: auto;
+    height: 100px;
+    background-size: cover;
+    border: solid;
+    border-radius: 6px;
+    border-color: #F24236;
+
+    font-family: 'Indie Flower';
+}
+
+h3 {
+  font-size: large;
+}
+
+p {
+  font-size: 20px
+}
+
+#luukkuNum {
+  font-size: 40px;
+}
+
+button {
+    padding: 5px;
+}
+
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center; 
+}
+
+.flex_item {
+    margin:10px 20px;
+    flex: 0 0 180px;
+    opacity: 0.9;
+}
+
+/*Luukku joka nappula. Muuttuu? */
+.flex_container #luukku {
+    border:solid;
+    border-radius: 6px;
+    color: #F24236;
+    font-size: 25px;
+    border-color: #F24236;
+    height: 150px;
+    width: 150px;
+    background-color: #FBEECF;
+}
+
+.flex_item:hover  #luukku .hoverText {
+    visibility: visible;
+    background-color: #f37024;
+}
+
+.hoverText {
+    display: none;
+}
+
+#openButton {
+  background-color: #2980b9;
+  height: 40px;
+  width: 80px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* KAKKOS SIVUN TOIMINNOT */
+.collapsible {
+    background-color: #FBEECF;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border: solid;
+    border-radius: 6px;
+    border-color: #FA7921;
+  }
+  .active, .collapsible:hover {
+    background-color: #f37024;
+  }
+  .content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    border-radius: 6px;
+    border-color: #ccc;
+    
+  }
+
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+h1 {
+    margin-bottom: 100px;
+  }
+
+
+/* Flip Card tyylittely */
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #FBEECF;
+  border:solid;
+  border-radius: 6px;
+  border-color: #F24236;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
